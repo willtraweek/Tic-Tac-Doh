@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Git for Unity
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 176
+  controlID: 382
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Window
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,14 +68,14 @@ MonoBehaviour:
     y: 0
     width: 604.6666
     height: 1299.3334
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,9 +94,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 483.33334
-    height: 770
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 783.3333
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -112,23 +112,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 770
+    y: 783.3333
     width: 1955.3334
-    height: 529.3334
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+    height: 516.00006
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 13}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 112
+  controlID: 38
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,11 +245,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1955.3334
-    height: 770
+    height: 783.3333
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 101
+  controlID: 39
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,7 +268,7 @@ MonoBehaviour:
     x: 483.33334
     y: 0
     width: 1472
-    height: 770
+    height: 783.3333
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -311,14 +311,14 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  progressMessageClearTime: 810.571889
+  progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 0
+  currentStatusEntriesHasUpdate: 1
+  repositoryProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -490,9 +490,9 @@ MonoBehaviour:
     - name: origin/master
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentBranchHasUpdate: 1
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: initial commit
     currentBranch: master
@@ -502,30 +502,9 @@ MonoBehaviour:
         keys:
         - 00000000000000001000000000000000
         - ebf798dcb92eed94abef5a2038344224
+        - 58974399455ec3d44bcf5331acd360a0
         - d1589c74d0519af4b8dc03eb1d1dd559
-        - 131a6b21c8605f84396be9f6751fb6e3
-        - 8dde567720300e546a683f60815e393a
-        - 2cda990e2423bbf4892e6590ba056729
         - 21f93bfccf7b2a84baa21846f655b282
-        - 00000000000000006000000000000000
-        - 00000000000000007100000000000000
-        - 00000000000000008000000000000000
-        - 0000000000000000b000000000000000
-        - 0000000000000000c000000000000000
-        - 00000000000000006100000000000000
-        - 00000000000000002000000000000000
-        - 0000000000000000f100000000000000
-        - 00000000000000004100000000000000
-        - 00000000000000005100000000000000
-        - 0000000000000000b100000000000000
-        - 00000000000000004000000000000000
-        - 0000000000000000e100000000000000
-        - 00000000000000009000000000000000
-        - 00000000000000003000000000000000
-        - 00000000000000007000000000000000
-        - 0000000000000000a100000000000000
-        - 0000000000000000d100000000000000
-        - 0000000000000000c100000000000000
         values:
         - path: Assets
           label: Assets
@@ -536,7 +515,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -549,40 +528,22 @@ MonoBehaviour:
           label: Button.prefab
           level: 1
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
             path: Assets\Button.prefab
             fullPath: A:\game_dev\Tic Tac Doh\Assets\Button.prefab
             projectPath: Assets\Button.prefab
             originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: Assets\ButtonScript.cs
-          label: ButtonScript.cs
-          level: 1
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\ButtonScript.cs
-            fullPath: A:\game_dev\Tic Tac Doh\Assets\ButtonScript.cs
-            projectPath: Assets\ButtonScript.cs
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts
+          label: Scripts
           level: 1
           isFolder: 1
           isContainer: 0
@@ -590,7 +551,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -599,416 +560,49 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scenes\GameOver.unity
-          label: GameOver.unity
+        - path: Assets\Scripts\ButtonScript.cs
+          label: ButtonScript.cs
           level: 2
           isFolder: 0
-          isContainer: 1
+          isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Scenes\GameOver.unity
-            fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\GameOver.unity
-            projectPath: Assets\Scenes\GameOver.unity
+            path: Assets\Scripts\ButtonScript.cs
+            fullPath: A:\game_dev\Tic Tac Doh\Assets\Scripts\ButtonScript.cs
+            projectPath: Assets\Scripts\ButtonScript.cs
             originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: Assets\Scenes\Main.unity
-          label: Main.unity
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Main.unity
-            fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\Main.unity
-            projectPath: Assets\Scenes\Main.unity
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: Assets\TicTacToe.cs
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\TicTacToe.cs
           label: TicTacToe.cs
-          level: 1
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\TicTacToe.cs
-            fullPath: A:\game_dev\Tic Tac Doh\Assets\TicTacToe.cs
-            projectPath: Assets\TicTacToe.cs
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\AudioManager.asset
-          label: AudioManager.asset
-          level: 1
+          level: 2
           isFolder: 0
           isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: ProjectSettings\AudioManager.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\AudioManager.asset
-            projectPath: ProjectSettings\AudioManager.asset
+            path: Assets\Scripts\TicTacToe.cs
+            fullPath: A:\game_dev\Tic Tac Doh\Assets\Scripts\TicTacToe.cs
+            projectPath: Assets\Scripts\TicTacToe.cs
             originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\ClusterInputManager.asset
-          label: ClusterInputManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\ClusterInputManager.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ClusterInputManager.asset
-            projectPath: ProjectSettings\ClusterInputManager.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\DynamicsManager.asset
-          label: DynamicsManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\DynamicsManager.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\DynamicsManager.asset
-            projectPath: ProjectSettings\DynamicsManager.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\EditorBuildSettings.asset
-          label: EditorBuildSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\EditorBuildSettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\EditorBuildSettings.asset
-            projectPath: ProjectSettings\EditorBuildSettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\EditorSettings.asset
-          label: EditorSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\EditorSettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\EditorSettings.asset
-            projectPath: ProjectSettings\EditorSettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\GraphicsSettings.asset
-          label: GraphicsSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\GraphicsSettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\GraphicsSettings.asset
-            projectPath: ProjectSettings\GraphicsSettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\InputManager.asset
-          label: InputManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\InputManager.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\InputManager.asset
-            projectPath: ProjectSettings\InputManager.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\MemorySettings.asset
-          label: MemorySettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\MemorySettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\MemorySettings.asset
-            projectPath: ProjectSettings\MemorySettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\NavMeshAreas.asset
-          label: NavMeshAreas.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\NavMeshAreas.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\NavMeshAreas.asset
-            projectPath: ProjectSettings\NavMeshAreas.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\Physics2DSettings.asset
-          label: Physics2DSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\Physics2DSettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\Physics2DSettings.asset
-            projectPath: ProjectSettings\Physics2DSettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\PresetManager.asset
-          label: PresetManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\PresetManager.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\PresetManager.asset
-            projectPath: ProjectSettings\PresetManager.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\ProjectSettings.asset
-          label: ProjectSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\ProjectSettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ProjectSettings.asset
-            projectPath: ProjectSettings\ProjectSettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\ProjectVersion.txt
-          label: ProjectVersion.txt
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\ProjectVersion.txt
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ProjectVersion.txt
-            projectPath: ProjectSettings\ProjectVersion.txt
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\QualitySettings.asset
-          label: QualitySettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\QualitySettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\QualitySettings.asset
-            projectPath: ProjectSettings\QualitySettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\TagManager.asset
-          label: TagManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\TagManager.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\TagManager.asset
-            projectPath: ProjectSettings\TagManager.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\TimeManager.asset
-          label: TimeManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\TimeManager.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\TimeManager.asset
-            projectPath: ProjectSettings\TimeManager.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\UnityConnectSettings.asset
-          label: UnityConnectSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\UnityConnectSettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\UnityConnectSettings.asset
-            projectPath: ProjectSettings\UnityConnectSettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\VersionControlSettings.asset
-          label: VersionControlSettings.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\VersionControlSettings.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\VersionControlSettings.asset
-            projectPath: ProjectSettings\VersionControlSettings.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: ProjectSettings\VFXManager.asset
-          label: VFXManager.asset
-          level: 1
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: ProjectSettings\VFXManager.asset
-            fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\VFXManager.asset
-            projectPath: ProjectSettings\VFXManager.asset
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
+            indexStatus: 0
+            workTreeStatus: 3
       folders:
         keys:
         - .idea
         - .idea\.idea.Tic Tac Doh
         - .idea\.idea.Tic Tac Doh\.idea
         - Assets
-        - Assets\.idea
-        - Assets\.idea\.idea.Assets.dir
-        - Assets\.idea\.idea.Assets.dir\.idea
-        - Assets\Scenes
-        - Packages
-        - ProjectSettings
-        - UserSettings
-        - UserSettings\Layouts
+        - Assets\Scripts
         values:
         - path: .idea
           label: .idea
@@ -1019,7 +613,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -1037,7 +631,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -1055,7 +649,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -1073,7 +667,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -1082,8 +676,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\.idea
-          label: .idea
+        - path: Assets\Scripts
+          label: Scripts
           level: 1
           isFolder: 1
           isContainer: 0
@@ -1091,133 +685,7 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\.idea\.idea.Assets.dir
-          label: .idea.Assets.dir
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\.idea\.idea.Assets.dir\.idea
-          label: .idea
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Packages
-          label: Packages
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: ProjectSettings
-          label: ProjectSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
+          checkState: 0
           isLocked: 0
           gitStatusEntry:
             path: 
@@ -1263,7 +731,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1281,7 +749,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1299,7 +767,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1308,8 +776,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: .idea\.idea.Tic Tac Doh\.idea\.gitignore
-        label: .gitignore
+      - path: .idea\.idea.Tic Tac Doh\.idea\vcs.xml
+        label: vcs.xml
         level: 3
         isFolder: 0
         isContainer: 0
@@ -1317,51 +785,15 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: .idea\.idea.Tic Tac Doh\.idea\.gitignore
-          fullPath: A:\game_dev\Tic Tac Doh\.idea\.idea.Tic Tac Doh\.idea\.gitignore
-          projectPath: .idea\.idea.Tic Tac Doh\.idea\.gitignore
+          path: .idea\.idea.Tic Tac Doh\.idea\vcs.xml
+          fullPath: A:\game_dev\Tic Tac Doh\.idea\.idea.Tic Tac Doh\.idea\vcs.xml
+          projectPath: .idea\.idea.Tic Tac Doh\.idea\vcs.xml
           originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: .idea\.idea.Tic Tac Doh\.idea\encodings.xml
-        label: encodings.xml
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: .idea\.idea.Tic Tac Doh\.idea\encodings.xml
-          fullPath: A:\game_dev\Tic Tac Doh\.idea\.idea.Tic Tac Doh\.idea\encodings.xml
-          projectPath: .idea\.idea.Tic Tac Doh\.idea\encodings.xml
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: .idea\.idea.Tic Tac Doh\.idea\indexLayout.xml
-        label: indexLayout.xml
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: .idea\.idea.Tic Tac Doh\.idea\indexLayout.xml
-          fullPath: A:\game_dev\Tic Tac Doh\.idea\.idea.Tic Tac Doh\.idea\indexLayout.xml
-          projectPath: .idea\.idea.Tic Tac Doh\.idea\indexLayout.xml
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets
         label: Assets
         level: 0
@@ -1371,7 +803,7 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
           path: 
@@ -1379,171 +811,45 @@ MonoBehaviour:
           projectPath: 
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\.idea
-        label: .idea
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\.idea\.idea.Assets.dir
-        label: .idea.Assets.dir
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\.idea\.idea.Assets.dir\.idea
-        label: .idea
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\.idea\.idea.Assets.dir\.idea\.gitignore
-        label: .gitignore
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\.idea\.idea.Assets.dir\.idea\.gitignore
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\.idea\.idea.Assets.dir\.idea\.gitignore
-          projectPath: Assets\.idea\.idea.Assets.dir\.idea\.gitignore
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\.idea\.idea.Assets.dir\.idea\encodings.xml
-        label: encodings.xml
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\.idea\.idea.Assets.dir\.idea\encodings.xml
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\.idea\.idea.Assets.dir\.idea\encodings.xml
-          projectPath: Assets\.idea\.idea.Assets.dir\.idea\encodings.xml
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\.idea\.idea.Assets.dir\.idea\indexLayout.xml
-        label: indexLayout.xml
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\.idea\.idea.Assets.dir\.idea\indexLayout.xml
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\.idea\.idea.Assets.dir\.idea\indexLayout.xml
-          projectPath: Assets\.idea\.idea.Assets.dir\.idea\indexLayout.xml
-          originalPath: 
-          indexStatus: 4
           workTreeStatus: 0
       - path: Assets\Button.prefab
         label: Button.prefab
         level: 1
         isFolder: 0
-        isContainer: 1
+        isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
           path: Assets\Button.prefab
           fullPath: A:\game_dev\Tic Tac Doh\Assets\Button.prefab
           projectPath: Assets\Button.prefab
           originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Button.prefab.meta
-        label: Button.prefab.meta
-        level: 2
-        isFolder: 0
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts
+        label: Scripts
+        level: 1
+        isFolder: 1
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Button.prefab.meta
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\Button.prefab.meta
-          projectPath: Assets\Button.prefab.meta
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
-          indexStatus: 4
+          indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\ButtonScript.cs
+      - path: Assets\Scripts\ButtonScript.cs
         label: ButtonScript.cs
-        level: 1
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\ButtonScript.cs
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\ButtonScript.cs
-          projectPath: Assets\ButtonScript.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\ButtonScript.cs.meta
-        label: ButtonScript.cs.meta
         level: 2
         isFolder: 0
         isContainer: 0
@@ -1551,143 +857,17 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\ButtonScript.cs.meta
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\ButtonScript.cs.meta
-          projectPath: Assets\ButtonScript.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scenes.meta
-        label: Scenes.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes.meta
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes.meta
-          projectPath: Assets\Scenes.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Scripts\ButtonScript.cs
+          fullPath: A:\game_dev\Tic Tac Doh\Assets\Scripts\ButtonScript.cs
+          projectPath: Assets\Scripts\ButtonScript.cs
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\GameOver.unity
-        label: GameOver.unity
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\GameOver.unity
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\GameOver.unity
-          projectPath: Assets\Scenes\GameOver.unity
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scenes\GameOver.unity.meta
-        label: GameOver.unity.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\GameOver.unity.meta
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\GameOver.unity.meta
-          projectPath: Assets\Scenes\GameOver.unity.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scenes\Main.unity
-        label: Main.unity
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Main.unity
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\Main.unity
-          projectPath: Assets\Scenes\Main.unity
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scenes\Main.unity.meta
-        label: Main.unity.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Main.unity.meta
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\Main.unity.meta
-          projectPath: Assets\Scenes\Main.unity.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\TicTacToe.cs
+          workTreeStatus: 3
+      - path: Assets\Scripts\TicTacToe.cs
         label: TicTacToe.cs
-        level: 1
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\TicTacToe.cs
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\TicTacToe.cs
-          projectPath: Assets\TicTacToe.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\TicTacToe.cs.meta
-        label: TicTacToe.cs.meta
         level: 2
         isFolder: 0
         isContainer: 0
@@ -1695,1010 +875,68 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\TicTacToe.cs.meta
-          fullPath: A:\game_dev\Tic Tac Doh\Assets\TicTacToe.cs.meta
-          projectPath: Assets\TicTacToe.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Packages
-        label: Packages
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Scripts\TicTacToe.cs
+          fullPath: A:\game_dev\Tic Tac Doh\Assets\Scripts\TicTacToe.cs
+          projectPath: Assets\Scripts\TicTacToe.cs
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 0
-      - path: Packages\manifest.json
-        label: manifest.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Packages\manifest.json
-          fullPath: A:\game_dev\Tic Tac Doh\Packages\manifest.json
-          projectPath: Packages\manifest.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Packages\packages-lock.json
-        label: packages-lock.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Packages\packages-lock.json
-          fullPath: A:\game_dev\Tic Tac Doh\Packages\packages-lock.json
-          projectPath: Packages\packages-lock.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings
-        label: ProjectSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: ProjectSettings\AudioManager.asset
-        label: AudioManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\AudioManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\AudioManager.asset
-          projectPath: ProjectSettings\AudioManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\BurstAotSettings_StandaloneWindows.json
-        label: BurstAotSettings_StandaloneWindows.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\BurstAotSettings_StandaloneWindows.json
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\BurstAotSettings_StandaloneWindows.json
-          projectPath: ProjectSettings\BurstAotSettings_StandaloneWindows.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\BurstAotSettings_WebGL.json
-        label: BurstAotSettings_WebGL.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\BurstAotSettings_WebGL.json
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\BurstAotSettings_WebGL.json
-          projectPath: ProjectSettings\BurstAotSettings_WebGL.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\BurstAotSettings_WSAPlayer.json
-        label: BurstAotSettings_WSAPlayer.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\BurstAotSettings_WSAPlayer.json
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\BurstAotSettings_WSAPlayer.json
-          projectPath: ProjectSettings\BurstAotSettings_WSAPlayer.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\ClusterInputManager.asset
-        label: ClusterInputManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\ClusterInputManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ClusterInputManager.asset
-          projectPath: ProjectSettings\ClusterInputManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\CommonBurstAotSettings.json
-        label: CommonBurstAotSettings.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\CommonBurstAotSettings.json
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\CommonBurstAotSettings.json
-          projectPath: ProjectSettings\CommonBurstAotSettings.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\DynamicsManager.asset
-        label: DynamicsManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\DynamicsManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\DynamicsManager.asset
-          projectPath: ProjectSettings\DynamicsManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\EditorBuildSettings.asset
-        label: EditorBuildSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\EditorBuildSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\EditorBuildSettings.asset
-          projectPath: ProjectSettings\EditorBuildSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\EditorSettings.asset
-        label: EditorSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\EditorSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\EditorSettings.asset
-          projectPath: ProjectSettings\EditorSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\GraphicsSettings.asset
-        label: GraphicsSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\GraphicsSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\GraphicsSettings.asset
-          projectPath: ProjectSettings\GraphicsSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\InputManager.asset
-        label: InputManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\InputManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\InputManager.asset
-          projectPath: ProjectSettings\InputManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\MemorySettings.asset
-        label: MemorySettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\MemorySettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\MemorySettings.asset
-          projectPath: ProjectSettings\MemorySettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\NavMeshAreas.asset
-        label: NavMeshAreas.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\NavMeshAreas.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\NavMeshAreas.asset
-          projectPath: ProjectSettings\NavMeshAreas.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\NetworkManager.asset
-        label: NetworkManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\NetworkManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\NetworkManager.asset
-          projectPath: ProjectSettings\NetworkManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\PackageManagerSettings.asset
-        label: PackageManagerSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\PackageManagerSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\PackageManagerSettings.asset
-          projectPath: ProjectSettings\PackageManagerSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\Physics2DSettings.asset
-        label: Physics2DSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\Physics2DSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\Physics2DSettings.asset
-          projectPath: ProjectSettings\Physics2DSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\PresetManager.asset
-        label: PresetManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\PresetManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\PresetManager.asset
-          projectPath: ProjectSettings\PresetManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\ProjectSettings.asset
-        label: ProjectSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\ProjectSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ProjectSettings.asset
-          projectPath: ProjectSettings\ProjectSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\ProjectVersion.txt
-        label: ProjectVersion.txt
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\ProjectVersion.txt
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ProjectVersion.txt
-          projectPath: ProjectSettings\ProjectVersion.txt
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\QualitySettings.asset
-        label: QualitySettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\QualitySettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\QualitySettings.asset
-          projectPath: ProjectSettings\QualitySettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\SceneTemplateSettings.json
-        label: SceneTemplateSettings.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\SceneTemplateSettings.json
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\SceneTemplateSettings.json
-          projectPath: ProjectSettings\SceneTemplateSettings.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\TagManager.asset
-        label: TagManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\TagManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\TagManager.asset
-          projectPath: ProjectSettings\TagManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\TimeManager.asset
-        label: TimeManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\TimeManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\TimeManager.asset
-          projectPath: ProjectSettings\TimeManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\UnityConnectSettings.asset
-        label: UnityConnectSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\UnityConnectSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\UnityConnectSettings.asset
-          projectPath: ProjectSettings\UnityConnectSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\VersionControlSettings.asset
-        label: VersionControlSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\VersionControlSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\VersionControlSettings.asset
-          projectPath: ProjectSettings\VersionControlSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\VFXManager.asset
-        label: VFXManager.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\VFXManager.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\VFXManager.asset
-          projectPath: ProjectSettings\VFXManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: ProjectSettings\XRSettings.asset
-        label: XRSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: ProjectSettings\XRSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\XRSettings.asset
-          projectPath: ProjectSettings\XRSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: A:\game_dev\Tic Tac Doh\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: A:\game_dev\Tic Tac Doh\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: UserSettings\Search.index
-        label: Search.index
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Search.index
-          fullPath: A:\game_dev\Tic Tac Doh\UserSettings\Search.index
-          projectPath: UserSettings\Search.index
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: UserSettings\Search.settings
-        label: Search.settings
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Search.settings
-          fullPath: A:\game_dev\Tic Tac Doh\UserSettings\Search.settings
-          projectPath: UserSettings\Search.settings
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
+          workTreeStatus: 3
       selectedNode:
-        path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
+        path: Assets\Scripts\ButtonScript.cs
+        label: ButtonScript.cs
+        level: 2
+        isFolder: 0
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 1
+        checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
+          path: Assets\Scripts\ButtonScript.cs
+          fullPath: A:\game_dev\Tic Tac Doh\Assets\Scripts\ButtonScript.cs
+          projectPath: Assets\Scripts\ButtonScript.cs
           originalPath: 
           indexStatus: 0
-          workTreeStatus: 0
+          workTreeStatus: 3
     gitStatusEntries:
-    - path: .idea\.idea.Tic Tac Doh\.idea\.gitignore
-      fullPath: A:\game_dev\Tic Tac Doh\.idea\.idea.Tic Tac Doh\.idea\.gitignore
-      projectPath: .idea\.idea.Tic Tac Doh\.idea\.gitignore
+    - path: .idea\.idea.Tic Tac Doh\.idea\vcs.xml
+      fullPath: A:\game_dev\Tic Tac Doh\.idea\.idea.Tic Tac Doh\.idea\vcs.xml
+      projectPath: .idea\.idea.Tic Tac Doh\.idea\vcs.xml
       originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: .idea\.idea.Tic Tac Doh\.idea\encodings.xml
-      fullPath: A:\game_dev\Tic Tac Doh\.idea\.idea.Tic Tac Doh\.idea\encodings.xml
-      projectPath: .idea\.idea.Tic Tac Doh\.idea\encodings.xml
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: .idea\.idea.Tic Tac Doh\.idea\indexLayout.xml
-      fullPath: A:\game_dev\Tic Tac Doh\.idea\.idea.Tic Tac Doh\.idea\indexLayout.xml
-      projectPath: .idea\.idea.Tic Tac Doh\.idea\indexLayout.xml
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\.idea\.idea.Assets.dir\.idea\.gitignore
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\.idea\.idea.Assets.dir\.idea\.gitignore
-      projectPath: Assets\.idea\.idea.Assets.dir\.idea\.gitignore
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\.idea\.idea.Assets.dir\.idea\encodings.xml
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\.idea\.idea.Assets.dir\.idea\encodings.xml
-      projectPath: Assets\.idea\.idea.Assets.dir\.idea\encodings.xml
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\.idea\.idea.Assets.dir\.idea\indexLayout.xml
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\.idea\.idea.Assets.dir\.idea\indexLayout.xml
-      projectPath: Assets\.idea\.idea.Assets.dir\.idea\indexLayout.xml
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
+      indexStatus: 1
+      workTreeStatus: 1
     - path: Assets\Button.prefab
       fullPath: A:\game_dev\Tic Tac Doh\Assets\Button.prefab
       projectPath: Assets\Button.prefab
       originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Button.prefab.meta
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\Button.prefab.meta
-      projectPath: Assets\Button.prefab.meta
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\ButtonScript.cs
+      fullPath: A:\game_dev\Tic Tac Doh\Assets\Scripts\ButtonScript.cs
+      projectPath: Assets\Scripts\ButtonScript.cs
       originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\ButtonScript.cs
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\ButtonScript.cs
-      projectPath: Assets\ButtonScript.cs
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\TicTacToe.cs
+      fullPath: A:\game_dev\Tic Tac Doh\Assets\Scripts\TicTacToe.cs
+      projectPath: Assets\Scripts\TicTacToe.cs
       originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\ButtonScript.cs.meta
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\ButtonScript.cs.meta
-      projectPath: Assets\ButtonScript.cs.meta
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scenes.meta
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes.meta
-      projectPath: Assets\Scenes.meta
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scenes\GameOver.unity
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\GameOver.unity
-      projectPath: Assets\Scenes\GameOver.unity
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scenes\GameOver.unity.meta
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\GameOver.unity.meta
-      projectPath: Assets\Scenes\GameOver.unity.meta
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scenes\Main.unity
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\Main.unity
-      projectPath: Assets\Scenes\Main.unity
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scenes\Main.unity.meta
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\Scenes\Main.unity.meta
-      projectPath: Assets\Scenes\Main.unity.meta
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\TicTacToe.cs
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\TicTacToe.cs
-      projectPath: Assets\TicTacToe.cs
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\TicTacToe.cs.meta
-      fullPath: A:\game_dev\Tic Tac Doh\Assets\TicTacToe.cs.meta
-      projectPath: Assets\TicTacToe.cs.meta
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Packages\manifest.json
-      fullPath: A:\game_dev\Tic Tac Doh\Packages\manifest.json
-      projectPath: Packages\manifest.json
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Packages\packages-lock.json
-      fullPath: A:\game_dev\Tic Tac Doh\Packages\packages-lock.json
-      projectPath: Packages\packages-lock.json
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\AudioManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\AudioManager.asset
-      projectPath: ProjectSettings\AudioManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\BurstAotSettings_StandaloneWindows.json
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\BurstAotSettings_StandaloneWindows.json
-      projectPath: ProjectSettings\BurstAotSettings_StandaloneWindows.json
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\BurstAotSettings_WebGL.json
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\BurstAotSettings_WebGL.json
-      projectPath: ProjectSettings\BurstAotSettings_WebGL.json
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\BurstAotSettings_WSAPlayer.json
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\BurstAotSettings_WSAPlayer.json
-      projectPath: ProjectSettings\BurstAotSettings_WSAPlayer.json
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\ClusterInputManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ClusterInputManager.asset
-      projectPath: ProjectSettings\ClusterInputManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\CommonBurstAotSettings.json
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\CommonBurstAotSettings.json
-      projectPath: ProjectSettings\CommonBurstAotSettings.json
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\DynamicsManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\DynamicsManager.asset
-      projectPath: ProjectSettings\DynamicsManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\EditorBuildSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\EditorBuildSettings.asset
-      projectPath: ProjectSettings\EditorBuildSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\EditorSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\EditorSettings.asset
-      projectPath: ProjectSettings\EditorSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\GraphicsSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\GraphicsSettings.asset
-      projectPath: ProjectSettings\GraphicsSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\InputManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\InputManager.asset
-      projectPath: ProjectSettings\InputManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\MemorySettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\MemorySettings.asset
-      projectPath: ProjectSettings\MemorySettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\NavMeshAreas.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\NavMeshAreas.asset
-      projectPath: ProjectSettings\NavMeshAreas.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\NetworkManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\NetworkManager.asset
-      projectPath: ProjectSettings\NetworkManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\PackageManagerSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\PackageManagerSettings.asset
-      projectPath: ProjectSettings\PackageManagerSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\Physics2DSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\Physics2DSettings.asset
-      projectPath: ProjectSettings\Physics2DSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\PresetManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\PresetManager.asset
-      projectPath: ProjectSettings\PresetManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\ProjectSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ProjectSettings.asset
-      projectPath: ProjectSettings\ProjectSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\ProjectVersion.txt
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\ProjectVersion.txt
-      projectPath: ProjectSettings\ProjectVersion.txt
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\QualitySettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\QualitySettings.asset
-      projectPath: ProjectSettings\QualitySettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\SceneTemplateSettings.json
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\SceneTemplateSettings.json
-      projectPath: ProjectSettings\SceneTemplateSettings.json
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\TagManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\TagManager.asset
-      projectPath: ProjectSettings\TagManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\TimeManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\TimeManager.asset
-      projectPath: ProjectSettings\TimeManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\UnityConnectSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\UnityConnectSettings.asset
-      projectPath: ProjectSettings\UnityConnectSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\VersionControlSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\VersionControlSettings.asset
-      projectPath: ProjectSettings\VersionControlSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\VFXManager.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\VFXManager.asset
-      projectPath: ProjectSettings\VFXManager.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: ProjectSettings\XRSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\ProjectSettings\XRSettings.asset
-      projectPath: ProjectSettings\XRSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: UserSettings\EditorUserSettings.asset
-      fullPath: A:\game_dev\Tic Tac Doh\UserSettings\EditorUserSettings.asset
-      projectPath: UserSettings\EditorUserSettings.asset
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: A:\game_dev\Tic Tac Doh\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: UserSettings\Search.index
-      fullPath: A:\game_dev\Tic Tac Doh\UserSettings\Search.index
-      projectPath: UserSettings\Search.index
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: UserSettings\Search.settings
-      fullPath: A:\game_dev\Tic Tac Doh\UserSettings\Search.settings
-      projectPath: UserSettings\Search.settings
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    changedFilesText: 50 changed files
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 4 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-06-26T22:30:57.933-05:00
+      updatedTimeString: 2023-06-27T01:25:53.283-05:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-06-27T01:40:23.844-05:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-06-27T01:12:04.640-05:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -3203,8 +1441,8 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/willtraweek/Tic-Tac-Doh.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 0
-  isTrackingRemoteBranch: 0
+  hasItemsToCommit: 1
+  isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
     m_Image: {fileID: 0}
@@ -3214,13 +1452,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-06-26T22:30:57.933-05:00
+    updatedTimeString: 2023-06-26T23:19:15.928-05:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 0001-01-01T00:00:00.000+00:00
+    updatedTimeString: 2023-06-26T23:19:16.174-05:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 0001-01-01T00:00:00.000+00:00
+    updatedTimeString: 2023-06-26T23:24:28.494-05:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -3239,7 +1477,7 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: 
   repositoryProgressValue: 0
-  repositoryProgressMessage: Fetching
+  repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
   primaryConnectionUsername: 
@@ -3264,9 +1502,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 842.6667
+    y: 856
     width: 1954.3334
-    height: 508.33337
+    height: 495.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -3288,7 +1526,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -3296,32 +1534,32 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: A:\game_dev\Tic Tac Doh
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6610000
-    m_LastClickedID: 25078
-    m_ExpandedIDs: 000000003c61000000ca9a3bffffff7f
+    m_SelectedIDs: 56640000
+    m_LastClickedID: 25686
+    m_ExpandedIDs: 000000009c63000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Scripts
+      m_OriginalName: Scripts
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 25686
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -3333,7 +1571,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3c590000
     m_LastClickedID: 22844
-    m_ExpandedIDs: 000000003c610000
+    m_ExpandedIDs: 000000009c630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3358,8 +1596,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 0471ffff
+    m_LastClickedInstanceID: -36604
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
@@ -3459,7 +1697,7 @@ MonoBehaviour:
     x: 0
     y: 72.66667
     width: 482.33334
-    height: 749
+    height: 762.3333
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -3473,9 +1711,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 14fbffff
+      m_SelectedIDs: 0471ffff
+      m_LastClickedID: -36604
+      m_ExpandedIDs: 5263ffff2c76ffff5c7affffbc81ffff6887ffff5cafffff0eb6ffffaebdffff50c0ffffaad0ffffa8d2fffffad2ffff44d5ffff84d5ffff0efbfffffc620000026300000a630000f0760000227d00002a7d0000b48700008c8b0000f0a70000eaa80000f2a80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3522,7 +1760,7 @@ MonoBehaviour:
     x: 483.33334
     y: 72.66667
     width: 1470
-    height: 749
+    height: 762.3333
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -3868,9 +2106,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 631.6177, y: 1368.4744, z: -278.791}
+    m_Target: {x: 1090.9059, y: 1456.6139, z: -12.305597}
     speed: 2
-    m_Value: {x: 631.6177, y: 1368.4744, z: -278.791}
+    m_Value: {x: 1090.9059, y: 1456.6139, z: -12.305597}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -3920,9 +2158,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1887.8397
+    m_Target: 1608.481
     speed: 2
-    m_Value: 1887.8397
+    m_Value: 1608.481
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -3968,9 +2206,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 842.6667
+    y: 856
     width: 1954.3334
-    height: 508.33337
+    height: 495.00006
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -4004,7 +2242,7 @@ MonoBehaviour:
     x: 483.33334
     y: 72.66667
     width: 1470
-    height: 749
+    height: 762.3333
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0

@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7200474206181939321}
   - component: {fileID: 3528116246547274512}
   m_Layer: 5
-  m_Name: Button
+  m_Name: TicTacToeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
