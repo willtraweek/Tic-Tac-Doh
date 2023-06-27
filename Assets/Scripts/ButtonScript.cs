@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ButtonScript : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class ButtonScript : MonoBehaviour
 	{
 		if (GameData.Instance.IsClickable)
 		{
-			Text buttonText = _button.GetComponentInChildren<Text>();
+			TextMeshProUGUI buttonText = _button.GetComponentInChildren<TextMeshProUGUI>();
 			if (buttonText.text == "")
 			{
 				Debug.Log("Button " + _button.name + " clicked");

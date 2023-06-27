@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class TicTacToe : MonoBehaviour
 {
@@ -64,13 +65,13 @@ public class TicTacToe : MonoBehaviour
         {
             for (int row = 0; row < 3; row++)
             {
-                if (_board[row, 0].GetComponentInChildren<Text>().text ==
-                    _board[row, 1].GetComponentInChildren<Text>().text &&
-                    _board[row, 1].GetComponentInChildren<Text>().text ==
-                    _board[row, 2].GetComponentInChildren<Text>().text &&
-                    _board[row, 0].GetComponentInChildren<Text>().text != "")
+                if (_board[row, 0].GetComponentInChildren<TextMeshProUGUI>().text ==
+                    _board[row, 1].GetComponentInChildren<TextMeshProUGUI>().text &&
+                    _board[row, 1].GetComponentInChildren<TextMeshProUGUI>().text ==
+                    _board[row, 2].GetComponentInChildren<TextMeshProUGUI>().text &&
+                    _board[row, 0].GetComponentInChildren<TextMeshProUGUI>().text != "")
                 {
-                    return _board[row, 0].GetComponentInChildren<Text>().text[0];
+                    return _board[row, 0].GetComponentInChildren<TextMeshProUGUI>().text[0];
                 }
             }
             return ' ';
@@ -80,13 +81,13 @@ public class TicTacToe : MonoBehaviour
         {
             for (int col = 0; col < 3; col++)
             {
-                if (_board[0, col].GetComponentInChildren<Text>().text ==
-                    _board[1, col].GetComponentInChildren<Text>().text &&
-                    _board[1, col].GetComponentInChildren<Text>().text ==
-                    _board[2, col].GetComponentInChildren<Text>().text &&
-                    _board[0, col].GetComponentInChildren<Text>().text != "")
+                if (_board[0, col].GetComponentInChildren<TextMeshProUGUI>().text ==
+                    _board[1, col].GetComponentInChildren<TextMeshProUGUI>().text &&
+                    _board[1, col].GetComponentInChildren<TextMeshProUGUI>().text ==
+                    _board[2, col].GetComponentInChildren<TextMeshProUGUI>().text &&
+                    _board[0, col].GetComponentInChildren<TextMeshProUGUI>().text != "")
                 {
-                    return _board[0, col].GetComponentInChildren<Text>().text[0];
+                    return _board[0, col].GetComponentInChildren<TextMeshProUGUI>().text[0];
                 }
             }
 
@@ -95,15 +96,15 @@ public class TicTacToe : MonoBehaviour
 
         char CheckDiagonals()
         {
-            if (((_board[0, 0].GetComponentInChildren<Text>().text == _board[1, 1].GetComponentInChildren<Text>().text &&
-                 _board[1, 1].GetComponentInChildren<Text>().text == _board[2, 2].GetComponentInChildren<Text>().text)
+            if (((_board[0, 0].GetComponentInChildren<TextMeshProUGUI>().text == _board[1, 1].GetComponentInChildren<TextMeshProUGUI>().text &&
+                 _board[1, 1].GetComponentInChildren<TextMeshProUGUI>().text == _board[2, 2].GetComponentInChildren<TextMeshProUGUI>().text)
                 ||
-                (_board[0, 2].GetComponentInChildren<Text>().text == _board[1, 1].GetComponentInChildren<Text>().text &&
-                 _board[1, 1].GetComponentInChildren<Text>().text == _board[2, 0].GetComponentInChildren<Text>().text))
-                && _board[1,1].GetComponentInChildren<Text>().text != "")
+                (_board[0, 2].GetComponentInChildren<TextMeshProUGUI>().text == _board[1, 1].GetComponentInChildren<TextMeshProUGUI>().text &&
+                 _board[1, 1].GetComponentInChildren<TextMeshProUGUI>().text == _board[2, 0].GetComponentInChildren<TextMeshProUGUI>().text))
+                && _board[1,1].GetComponentInChildren<TextMeshProUGUI>().text != "")
                  
             {
-                return _board[1, 1].GetComponentInChildren<Text>().text[0];
+                return _board[1, 1].GetComponentInChildren<TextMeshProUGUI>().text[0];
             }
             return ' ';
         }

@@ -3,7 +3,7 @@ using System.Net.Http;
 using UnityEngine;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using UnityEngine.UI;
+using TMPro;
 
 public class TriviaQuestion
 {
@@ -41,7 +41,7 @@ public class TriviaController : MonoBehaviour
     {
         TriviaQuestion question = questions[current_question];
         // Set the question text
-        GetComponentInChildren<Text>().text = question.question;
+        GetComponentInChildren<TextMeshProUGUI>().text = question.question;
         
         // Set the answer box texts
         List<string> possible_answers = question.incorrect_answers.ToList();
@@ -49,7 +49,7 @@ public class TriviaController : MonoBehaviour
         possible_answers = possible_answers.OrderBy(x => random.Next()).ToList();
         for (int i = 0; i < answer_boxes.Length; i++)
         {
-            answer_boxes[i].GetComponentInChildren<Text>().text = possible_answers[i];
+            answer_boxes[i].GetComponentInChildren<TextMeshProUGUI>().text = possible_answers[i];
             answer_boxes[i].correct_answer = possible_answers[i] == question.correct_answer;
         }
         return question;
