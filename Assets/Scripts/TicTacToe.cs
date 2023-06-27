@@ -1,28 +1,27 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine._Scripting;
+using UnityEngine.SceneManagement;
 
 public class TicTacToe : MonoBehaviour
 {
     private Button[,] _board = new Button[3,3];
-    public bool isClickable = true;
     private char _turn = 'X';
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (GameOver())
         {
-            Console.WriteLine("Game Over");
-            //TODO: Change Scene + Change GameStatus Text
+            Debug.Log("GameOver");
+            SceneManager.LoadScene("GameOver");
+            GameData.Instance.DidWin = _turn != 'X';
         }
     }
 
     private void Awake()
     {
+        _turn = GameData.Instance.CurrentPlayer;
         Button[] temp = GetComponentsInChildren<Button>();
         
         Button findButton(string name)
@@ -61,7 +60,62 @@ public class TicTacToe : MonoBehaviour
     
     private bool GameOver()
     {
-        //TODO: Check for a winner
+        char CheckRows()
+        {
+            for (int row = 0; row < 3; row++)
+            {
+                if (_board[row, 0].GetComponentInChildren<Text>().text ==
+                    _board[row, 1].GetComponentInChildren<Text>().text &&
+                    _board[row, 1].GetComponentInChildren<Text>().text ==
+                    _board[row, 2].GetComponentInChildren<Text>().text &&
+                    _board[row, 0].GetComponentInChildren<Text>().text != "")
+                {
+                    return _board[row, 0].GetComponentInChildren<Text>().text[0];
+                }
+            }
+            return ' ';
+        }
+
+        char CheckColumns()
+        {
+            for (int col = 0; col < 3; col++)
+            {
+                if (_board[0, col].GetComponentInChildren<Text>().text ==
+                    _board[1, col].GetComponentInChildren<Text>().text &&
+                    _board[1, col].GetComponentInChildren<Text>().text ==
+                    _board[2, col].GetComponentInChildren<Text>().text &&
+                    _board[0, col].GetComponentInChildren<Text>().text != "")
+                {
+                    return _board[0, col].GetComponentInChildren<Text>().text[0];
+                }
+            }
+
+            return ' ';
+        }
+
+        char CheckDiagonals()
+        {
+            if (((_board[0, 0].GetComponentInChildren<Text>().text == _board[1, 1].GetComponentInChildren<Text>().text &&
+                 _board[1, 1].GetComponentInChildren<Text>().text == _board[2, 2].GetComponentInChildren<Text>().text)
+                ||
+                (_board[0, 2].GetComponentInChildren<Text>().text == _board[1, 1].GetComponentInChildren<Text>().text &&
+                 _board[1, 1].GetComponentInChildren<Text>().text == _board[2, 0].GetComponentInChildren<Text>().text))
+                && _board[1,1].GetComponentInChildren<Text>().text != "")
+                 
+            {
+                return _board[1, 1].GetComponentInChildren<Text>().text[0];
+            }
+            return ' ';
+        }
+        char[] players = new char[] { 'X', 'O' };
+        foreach (char player in players)
+        {
+            if (CheckRows() == player || CheckColumns() == player || CheckDiagonals() == player)
+            {
+               Debug.Log(player + "won!");
+               return true;
+            }
+        }
         return false;
     }
 }

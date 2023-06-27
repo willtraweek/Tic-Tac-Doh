@@ -1,13 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
 	private Button _button = null;
-	private bool _unplayed = true;
 	private TicTacToe _board;
 
 	void Start()
@@ -23,12 +19,14 @@ public class ButtonScript : MonoBehaviour
 
 	private void OnClick()
 	{
-		if (_board.isClickable)
+		if (GameData.Instance.IsClickable)
 		{
-			if (_unplayed)
+			Text buttonText = _button.GetComponentInChildren<Text>();
+			if (buttonText.text == "")
 			{
 				Debug.Log("Button " + _button.name + " clicked");
-				_button.GetComponentInChildren<Text>().text = _board.MakeMove().ToString();
+				buttonText.text = _board.MakeMove().ToString();
+				Debug.Log(buttonText.text);
 			}
 			else
 			{
