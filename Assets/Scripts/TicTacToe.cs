@@ -7,7 +7,6 @@ using TMPro;
 public class TicTacToe : MonoBehaviour
 {
     private Button[,] _board = new Button[3,3];
-    private char _turn = 'X';
 
     // Update is called once per frame
     private void Update()
@@ -16,13 +15,12 @@ public class TicTacToe : MonoBehaviour
         {
             Debug.Log("GameOver");
             SceneManager.LoadScene("GameOver");
-            GameData.Instance.DidPlayerWin = _turn != 'X';
+            GameData.Instance.DidPlayerWin = GameData.Instance.CurrentPlayer == 'X';
         }
     }
 
     private void Awake()
     {
-        _turn = GameData.Instance.CurrentPlayer;
         Button[] temp = GetComponentsInChildren<Button>();
         
         Button findButton(string name)
