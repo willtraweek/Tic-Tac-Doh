@@ -57,7 +57,8 @@ public class TriviaController : MonoBehaviour
     
     public TriviaQuestion GetNextQuestion()
     {
-        if (current_question >= questions.Count)
+        Debug.Log($"Question #: {current_question} out of {questions.Count}");
+        if (current_question >= questions.Count-1)
         {
             GetQuestions();
         }
