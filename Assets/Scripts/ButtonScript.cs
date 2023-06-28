@@ -31,6 +31,7 @@ public class ButtonScript : MonoBehaviour
 			Debug.Log("Button " + _button.name + " clicked");
 			buttonText.text = "X";
 			GameData.Instance.IsPlayerTurn = false;
+			GameData.Instance.MostRecentTurnWasPlayer = true;
 		}
 		else
 		{
