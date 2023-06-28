@@ -16,6 +16,7 @@ public class TicTacToe : MonoBehaviour
             Debug.Log("GameOver");
             SceneManager.LoadScene("GameOver");
             GameData.Instance.DidPlayerWin = GameData.Instance.MostRecentTurnWasPlayer;
+            GameData.Instance.TimeOfLastAnswer = 0.0f; // RESETS EVERYTHING TIME RELATED IN THE GAME
         }
     }
 
