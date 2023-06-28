@@ -1,4 +1,4 @@
-using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,7 +28,6 @@ public class AnswerBox : MonoBehaviour
         }
         else
         {
-            if (!_box.interactable) _controller.GetNextQuestion();
             _box.interactable = true;
             colors.normalColor = Color.white;
         }
@@ -42,7 +41,7 @@ public class AnswerBox : MonoBehaviour
         _controller = GetComponentInParent<TriviaController>();
     }
     
-    private void OnClick()
+    private async void OnClick()
     {
         Debug.Log("Answer box clicked");
         GameData.Instance.TimeOfLastAnswer = Time.time;
@@ -56,5 +55,8 @@ public class AnswerBox : MonoBehaviour
             Debug.Log("Incorrect answer");
             // TODO: let the AI take a turn
         }
+        // TODO: Add timer for disable time before doing next question
+        await Task.Delay((int)(DISABLE_TIME * 1000));
+        _controller.GetNextQuestion();
     }
 }

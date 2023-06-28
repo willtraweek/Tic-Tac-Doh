@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Net.Http;
+using System.Net;
 using UnityEngine;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -10,9 +11,28 @@ public class TriviaQuestion
     public string category { get; set; }
     public string type { get; set; }
     public string difficulty { get; set; }
-    public string question { get; set; }
-    public string correct_answer { get; set; }
-    public string[] incorrect_answers { get; set; }
+
+    private string _question;
+    public string question
+    {
+        get => _question;
+        set => _question = WebUtility.HtmlDecode(value);
+    }
+    
+    private string _correct_answer;
+    public string correct_answer
+    {
+        get => _correct_answer;
+        set => _correct_answer = WebUtility.HtmlDecode(value);
+    }
+    
+    private string[] _incorrect_answers;
+
+    public string[] incorrect_answers
+    {
+        get => _incorrect_answers;
+        set => _incorrect_answers = value.Select(WebUtility.HtmlDecode).ToArray();
+    }
     public bool played { get; set; } = false;
 }
 
@@ -57,7 +77,8 @@ public class TriviaController : MonoBehaviour
     
     public TriviaQuestion GetNextQuestion()
     {
-        if (current_question >= questions.Count)
+        Debug.Log($"Question #: {current_question} out of {questions.Count}");
+        if (current_question >= questions.Count-1)
         {
             GetQuestions();
         }
