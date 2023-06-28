@@ -10,6 +10,7 @@ public class ButtonScript : MonoBehaviour
 	void Start()
     {
         _button.onClick.AddListener(OnClick);
+        _button.interactable = false;
     }
 
 	private void Awake()
@@ -20,23 +21,16 @@ public class ButtonScript : MonoBehaviour
 
 	private void OnClick()
 	{
-		if (GameData.Instance.IsClickable)
+		TextMeshProUGUI buttonText = _button.GetComponentInChildren<TextMeshProUGUI>();
+		if (buttonText.text == "")
 		{
-			TextMeshProUGUI buttonText = _button.GetComponentInChildren<TextMeshProUGUI>();
-			if (buttonText.text == "")
-			{
-				Debug.Log("Button " + _button.name + " clicked");
-				buttonText.text = _board.MakeMove().ToString();
-				Debug.Log(buttonText.text);
-			}
-			else
-			{
-				Debug.Log("Button " + _button.name + " already played");
-			}
+			Debug.Log("Button " + _button.name + " clicked");
+			buttonText.text = _board.MakeMove().ToString();
+			Debug.Log(buttonText.text);
 		}
 		else
 		{
-			Debug.Log("Button " + _button.name + " not clickable");
+			Debug.Log("Button " + _button.name + " already played");
 		}
 	}
 }
