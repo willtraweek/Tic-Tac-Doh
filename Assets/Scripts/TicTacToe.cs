@@ -49,14 +49,6 @@ public class TicTacToe : MonoBehaviour
         
     }
 
-    public char MakeMove()
-    {
-        char output = _turn;
-        // return output before _turn is changed in order to make it easier to see who starts at the top of the file
-        _turn = _turn == 'X' ? 'O' : 'X';
-        return output;
-    }
-    
     private bool GameOver()
     {
         char CheckRows()
