@@ -49,12 +49,12 @@ public class AnswerBox : MonoBehaviour
         if (correct_answer)
         {
             Debug.Log("Correct answer");
-            // make the tic-tac-toe clickable
+            GameData.Instance.IsPlayerTurn = true;
         }
         else
         {
             Debug.Log("Incorrect answer");
-            // let the AI take a turn
+            // TODO: let the AI take a turn
         }
     }
 }

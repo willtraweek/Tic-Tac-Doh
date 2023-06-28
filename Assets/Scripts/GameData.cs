@@ -1,10 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 public class GameData : MonoBehaviour
 {
     public static GameData Instance { get; private set; }
-    
-    public bool IsClickable { get; set; } = true;
-    public char CurrentPlayer { get; set; } = 'X';
+    public bool IsPlayerTurn { get; set; } = false;
+    public bool MostRecentTurnWasPlayer { get; set; } = false;
     public bool DidPlayerWin { get; set; } = false;
     public float TimeOfLastAnswer { get; set; } = 0.0f;
 

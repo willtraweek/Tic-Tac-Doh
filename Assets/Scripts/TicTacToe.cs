@@ -7,7 +7,6 @@ using TMPro;
 public class TicTacToe : MonoBehaviour
 {
     private Button[,] _board = new Button[3,3];
-    private char _turn = 'X';
 
     // Update is called once per frame
     private void Update()
@@ -16,13 +15,13 @@ public class TicTacToe : MonoBehaviour
         {
             Debug.Log("GameOver");
             SceneManager.LoadScene("GameOver");
-            GameData.Instance.DidPlayerWin = _turn != 'X';
+            GameData.Instance.DidPlayerWin = GameData.Instance.MostRecentTurnWasPlayer;
+            GameData.Instance.TimeOfLastAnswer = 0.0f; // RESETS EVERYTHING TIME RELATED IN THE GAME
         }
     }
 
     private void Awake()
     {
-        _turn = GameData.Instance.CurrentPlayer;
         Button[] temp = GetComponentsInChildren<Button>();
         
         Button findButton(string name)
@@ -51,14 +50,6 @@ public class TicTacToe : MonoBehaviour
         
     }
 
-    public char MakeMove()
-    {
-        char output = _turn;
-        // return output before _turn is changed in order to make it easier to see who starts at the top of the file
-        _turn = _turn == 'X' ? 'O' : 'X';
-        return output;
-    }
-    
     private bool GameOver()
     {
         char CheckRows()
