@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Net.Http;
-using System.Web;
+using System.Net;
 using UnityEngine;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -16,14 +16,14 @@ public class TriviaQuestion
     public string question
     {
         get => _question;
-        set => _question = HttpUtility.HtmlDecode(value);
+        set => _question = WebUtility.HtmlDecode(value);
     }
     
     private string _correct_answer;
     public string correct_answer
     {
         get => _correct_answer;
-        set => _correct_answer = HttpUtility.HtmlDecode(value);
+        set => _correct_answer = WebUtility.HtmlDecode(value);
     }
     
     private string[] _incorrect_answers;
@@ -31,7 +31,7 @@ public class TriviaQuestion
     public string[] incorrect_answers
     {
         get => _incorrect_answers;
-        set => _incorrect_answers = value.Select(HttpUtility.HtmlDecode).ToArray();
+        set => _incorrect_answers = value.Select(WebUtility.HtmlDecode).ToArray();
     }
     public bool played { get; set; } = false;
 }
