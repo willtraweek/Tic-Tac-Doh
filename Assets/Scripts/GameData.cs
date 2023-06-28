@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 public class GameData : MonoBehaviour
 {
     public static GameData Instance { get; private set; }
@@ -6,6 +6,7 @@ public class GameData : MonoBehaviour
     public bool IsClickable { get; set; } = true;
     public char CurrentPlayer { get; set; } = 'X';
     public bool DidWin { get; set; } = false;
+    public float TimeOfLastAnswer { get; set; } = 0.0f;
 
     private void Awake()
     {
