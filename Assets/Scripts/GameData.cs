@@ -5,7 +5,7 @@ public class GameData : MonoBehaviour
     
     public bool IsClickable { get; set; } = true;
     public char CurrentPlayer { get; set; } = 'X';
-    public bool DidWin { get; set; } = false;
+    public bool DidPlayerWin { get; set; } = false;
     public float TimeOfLastAnswer { get; set; } = 0.0f;
 
     private void Awake()

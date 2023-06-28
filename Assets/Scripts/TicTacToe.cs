@@ -16,7 +16,7 @@ public class TicTacToe : MonoBehaviour
         {
             Debug.Log("GameOver");
             SceneManager.LoadScene("GameOver");
-            GameData.Instance.DidWin = _turn != 'X';
+            GameData.Instance.DidPlayerWin = _turn != 'X';
         }
     }
 
