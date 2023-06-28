@@ -10,8 +10,12 @@ public class ButtonScript : MonoBehaviour
 	void Start()
     {
         _button.onClick.AddListener(OnClick);
-        _button.interactable = false;
     }
+
+	void Update()
+	{
+		_button.interactable = GameData.Instance.IsPlayerTurn;
+	}
 
 	private void Awake()
 	{
@@ -25,8 +29,8 @@ public class ButtonScript : MonoBehaviour
 		if (buttonText.text == "")
 		{
 			Debug.Log("Button " + _button.name + " clicked");
-			buttonText.text = _board.MakeMove().ToString();
-			Debug.Log(buttonText.text);
+			buttonText.text = "X";
+			GameData.Instance.IsPlayerTurn = false;
 		}
 		else
 		{
