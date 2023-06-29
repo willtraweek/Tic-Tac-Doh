@@ -4,15 +4,23 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEditor;
+using UnityEngine.SocialPlatforms.Impl;
 
 struct MiniMaxResult
 {
     public int score;
     public int x;
     public int y;
+
+    public MiniMaxResult(int score, int x, int y)
+    {
+        this.score = score;
+        this.x = x;
+        this.y = y;
+    }
 }
 
-enum GameState
+public enum GameState
 {
     PlayerWin,
     AIWin,
@@ -74,22 +82,22 @@ public class TicTacToeBoard
         throw new Exception("No difference found between boards");
     }
 
-    private MiniMaxResult minimax(string[,] board, string player = "O", int depth = 0)
+    private MiniMaxResult minimax(string[,] board, int depth, string player = "O")
     {
+        //https://github.com/Cledersonbc/tic-tac-toe-minimax/blob/master/py_version/minimax.py
         MiniMaxResult result = new MiniMaxResult();
-        if (IsGameOver(board))
-        {
-            // the below works since we're only ever running MiniMax on an "O" player's turn, hence the static "O"
-            // What this does is check if the player who is winning is the "O" player -- if it's him, then the score
-            // will be positive, and if it's the "X" player, then the score will be negative
-            
-            // we're also weighting the score by the depth of the recursion, so the AI will prefer to win sooner
-            result.score = (9-depth) * GetPlayerValue(player) * GetPlayerValue("O");
-            return result;
-        } 
+        result.x = -1;
+        result.y = -1;
+        if (player == "O")
+            result.score = -1000;
+        else
+            result.score = 1000;
         
-        bool move = false;
-        int score = -2;
+        if (depth == 0 || IsGameOver() != GameState.InProgress)
+        {
+            result.score = (depth+1) * GetPlayerValue(player);
+            return result;
+        }
 
         for (int i = 0; i < 3; i++)
         {
@@ -97,33 +105,35 @@ public class TicTacToeBoard
             {
                 if (board[i,j] == "")
                 {
-                    string[,] tempBoard = new string[3, 3];
-                    // Copy board
-                    for (int x = 0; x < 3; x++)
+                    // put the player in the empty space
+                    board[i, j] = player;
+                    MiniMaxResult tempResult = new MiniMaxResult(
+                        minimax(board, depth - 1, player == "O" ? "X" : "O").score,
+                        i,
+                        j
+                    );
+                    board[i, j] = "";
+                    
+                    if (player == "O")
                     {
-                        for (int z = 0; z < 3; z++)
+                        if (tempResult.score > result.score)
                         {
-                            tempBoard[x, z] = board[x, z];
+                            result.score = tempResult.score;
+                            result.x = i;
+                            result.y = j;
                         }
                     }
-                    
-                    tempBoard[i, j] = player;
-                    MiniMaxResult temp_result = minimax(tempBoard, player == "O" ? "X" : "O", depth + 1);
-                    if (-temp_result.score > score)
+                    else
                     {
-                        result.score = -temp_result.score;
-                        result.x = i;
-                        result.y = j;
-                        move = true;
+                        if (tempResult.score < result.score)
+                        {
+                            result.score = tempResult.score;
+                            result.x = i;
+                            result.y = j;
+                        }
                     }
                 }
             }
-        }
-        
-        if (!move)
-        {
-            result = new MiniMaxResult();
-            result.score = 0;
         }
 
         return result;
@@ -131,11 +141,28 @@ public class TicTacToeBoard
 
     public void MakeAiMove()
     {
-        MiniMaxResult bestAIMove = minimax(GetArrayGameState());
-        _text[bestAIMove.x, bestAIMove.y].text = "O";
+        string[,] board = GetArrayGameState();
+        int moves = 0;
+        foreach (string text in board)
+        {
+            if (text != "")
+            {
+                moves++;
+            }
+        }
+
+        if (moves == 0)
+        {
+            _text[0, 0].text = "O";
+        }
+        else
+        {
+            MiniMaxResult bestAIMove = minimax(board, 9-moves);
+            _text[bestAIMove.x, bestAIMove.y].text = "O";
+        }
     }
     
-    public GameState IsGameOver(string[,] board)
+    public static GameState IsGameOver(string[,] board)
     {
         // Check for horizontal wins
         for (int i = 0; i < 3; i++)
@@ -178,7 +205,7 @@ public class TicTacToeBoard
         return tie ? GameState.Tie : GameState.InProgress;
     }
     
-    public bool IsGameOver()
+    public GameState IsGameOver()
     {
         return IsGameOver(GetArrayGameState());
     }
@@ -192,8 +219,9 @@ public class TicTacToe : MonoBehaviour
     {
         // TODO: MOVE THE BELOW TO A MANUAL CHECK WHEN AI MAKES MOVE OR USER MAKES MOVE
         // SHOULD SAVE PROCESSING POWER
-        if (_board.IsGameOver())
+        if (_board.IsGameOver() != GameState.InProgress)
         {
+            // TODO: NEED TO DO SOMETHING FOR TIES HERE
             Debug.Log("GameOver");
             SceneManager.LoadScene("GameOver");
             GameData.Instance.DidPlayerWin = GameData.Instance.MostRecentTurnWasPlayer;
