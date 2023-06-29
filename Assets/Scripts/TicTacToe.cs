@@ -12,6 +12,14 @@ struct MiniMaxResult
     public int y;
 }
 
+enum GameState
+{
+    PlayerWin,
+    AIWin,
+    Tie,
+    InProgress
+}
+
 public class TicTacToeBoard
 {
     private Button[,] _board = new Button[3, 3];
@@ -127,14 +135,14 @@ public class TicTacToeBoard
         _text[bestAIMove.x, bestAIMove.y].text = "O";
     }
     
-    public bool IsGameOver(string[,] board)
+    public GameState IsGameOver(string[,] board)
     {
         // Check for horizontal wins
         for (int i = 0; i < 3; i++)
         {
             if (board[i, 0] != "" && board[i, 0] == board[i, 1] && board[i, 1] == board[i, 2])
             {
-                return true;
+                return board[i, 0] == "X" ? GameState.PlayerWin : GameState.AIWin;
             }
         }
         
@@ -143,18 +151,18 @@ public class TicTacToeBoard
         {
             if (board[0, i] != "" && board[0, i] == board[1, i] && board[1, i] == board[2, i])
             {
-                return true;
+                return board[0, i] == "X" ? GameState.PlayerWin : GameState.AIWin;
             }
         }
         
         // Check for diagonal wins
         if (board[0, 0] != "" && board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2])
         {
-            return true;
+            return board[1, 1] == "X" ? GameState.PlayerWin : GameState.AIWin;
         }
         if (board[0, 2] != "" && board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0])
         {
-            return true;
+            return board[1, 1] == "X" ? GameState.PlayerWin : GameState.AIWin;
         }
         
         // Check for tie
@@ -166,7 +174,8 @@ public class TicTacToeBoard
                 tie = false;
             }
         }
-        return tie;
+
+        return tie ? GameState.Tie : GameState.InProgress;
     }
     
     public bool IsGameOver()
