@@ -58,7 +58,7 @@ public class AnswerBox : MonoBehaviour
             _board.MakeAIMove();
         }
         // TODO: Add timer for disable time before doing next question
-        await Task.Delay((int)(DISABLE_TIME * 1000));
+        await Task.Delay((int)(DISABLE_TIME * 1000 + 42)); // 42 = 1000/24 WAIT AN EXTRA FRAME BEFORE RESETTING
         _controller.GetNextQuestion();
     }
 }
