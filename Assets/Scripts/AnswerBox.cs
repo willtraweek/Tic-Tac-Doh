@@ -6,6 +6,7 @@ public class AnswerBox : MonoBehaviour
 {
     private TriviaController _controller = null;
     private Button _box = null;
+    private TicTacToe _board = null;
     [HideInInspector]
     public bool correct_answer = false;
 
@@ -39,6 +40,7 @@ public class AnswerBox : MonoBehaviour
     {
         _box = GetComponent<Button>();
         _controller = GetComponentInParent<TriviaController>();
+        _board = FindObjectOfType<TicTacToe>();
     }
     
     private async void OnClick()
@@ -53,7 +55,7 @@ public class AnswerBox : MonoBehaviour
         else
         {
             Debug.Log("Incorrect answer");
-            // TODO: let the AI take a turn
+            _board.MakeAIMove();
         }
         // TODO: Add timer for disable time before doing next question
         await Task.Delay((int)(DISABLE_TIME * 1000));
