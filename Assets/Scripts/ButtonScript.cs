@@ -14,7 +14,7 @@ public class ButtonScript : MonoBehaviour
 
 	void Update()
 	{
-		_button.interactable = GameData.Instance.IsPlayerTurn;
+		_button.interactable = !GameData.Instance.IsTriviaTime;
 	}
 
 	private void Awake()
@@ -29,9 +29,8 @@ public class ButtonScript : MonoBehaviour
 		if (buttonText.text == "")
 		{
 			Debug.Log("Button " + _button.name + " clicked");
-			buttonText.text = "X";
-			GameData.Instance.IsPlayerTurn = false;
-			GameData.Instance.MostRecentTurnWasPlayer = true;
+			buttonText.text = "_";
+			GameData.Instance.IsTriviaTime = true;
 		}
 		else
 		{

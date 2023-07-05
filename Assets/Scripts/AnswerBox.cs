@@ -29,7 +29,7 @@ public class AnswerBox : MonoBehaviour
         }
         else
         {
-            _box.interactable = true;
+            _box.interactable = GameData.Instance.IsTriviaTime;
             colors.normalColor = Color.white;
         }
         
@@ -47,18 +47,19 @@ public class AnswerBox : MonoBehaviour
     {
         Debug.Log("Answer box clicked");
         GameData.Instance.TimeOfLastAnswer = Time.time;
+        GameData.Instance.IsTriviaTime = false;
         if (correct_answer)
         {
             Debug.Log("Correct answer");
-            GameData.Instance.IsPlayerTurn = true;
+            _board.MakeMove("X");
         }
         else
         {
             Debug.Log("Incorrect answer");
-            _board.MakeAIMove();
+            _board.MakeMove("O");
         }
         // TODO: Add timer for disable time before doing next question
-        await Task.Delay((int)(DISABLE_TIME * 1000));
+        await Task.Delay((int)(DISABLE_TIME * 1000)); // 42 = 1000/24 WAIT AN EXTRA FRAME BEFORE RESETTING
         _controller.GetNextQuestion();
     }
 }
