@@ -6,6 +6,7 @@ public class GameData : MonoBehaviour
     public bool MostRecentTurnWasPlayer { get; set; } = false;
     public bool DidPlayerWin { get; set; } = false;
     public float TimeOfLastAnswer { get; set; } = 0.0f;
+    public bool IsTriviaTime { get; set; } = false;
 
     private void Awake()
     {

@@ -20,7 +20,6 @@ public class ResetGame : MonoBehaviour
     private void OnClick()
     {
         Debug.Log("Reset button clicked");
-        GameData.Instance.IsPlayerTurn = false;
         SceneManager.LoadScene("Main");
     }
 }

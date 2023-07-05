@@ -29,7 +29,8 @@ public class AnswerBox : MonoBehaviour
         }
         else
         {
-            _box.interactable = true;
+            if (GameData.Instance.IsTriviaTime)
+                _box.interactable = true;
             colors.normalColor = Color.white;
         }
         
@@ -47,10 +48,10 @@ public class AnswerBox : MonoBehaviour
     {
         Debug.Log("Answer box clicked");
         GameData.Instance.TimeOfLastAnswer = Time.time;
+        GameData.Instance.IsTriviaTime = false;
         if (correct_answer)
         {
             Debug.Log("Correct answer");
-            GameData.Instance.IsPlayerTurn = true;
         }
         else
         {
