@@ -29,7 +29,7 @@ public class TicTacToe : MonoBehaviour
             // TODO: NEED TO DO SOMETHING FOR TIES HERE
             Debug.Log("GameOver");
             SceneManager.LoadScene("GameOver");
-            GameData.Instance.DidPlayerWin = GameData.Instance.MostRecentTurnWasPlayer;
+            GameData.Instance.DidPlayerWin = IsGameOver() == GameState.PlayerWin;
             GameData.Instance.TimeOfLastAnswer = 0.0f; // RESETS EVERYTHING TIME RELATED IN THE GAME
         }
     }
