@@ -10,7 +10,7 @@ public class AnswerBox : MonoBehaviour
     [HideInInspector]
     public bool correct_answer = false;
 
-    private static float DISABLE_TIME = 3.0f;
+    private const float DisableTime = 3.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class AnswerBox : MonoBehaviour
         ColorBlock colors = _box.colors;
         
         if (GameData.Instance.TimeOfLastAnswer != 0.0f &&
-            Time.time - GameData.Instance.TimeOfLastAnswer < DISABLE_TIME)
+            Time.time - GameData.Instance.TimeOfLastAnswer < DisableTime)
         {
             _box.interactable = false;
             colors.disabledColor = correct_answer ? Color.green : Color.red;
@@ -30,6 +30,7 @@ public class AnswerBox : MonoBehaviour
         else
         {
             _box.interactable = GameData.Instance.IsTriviaTime;
+            colors.disabledColor = new Color(.66f, .66f, .66f);
             colors.normalColor = Color.white;
         }
         
@@ -58,8 +59,7 @@ public class AnswerBox : MonoBehaviour
             Debug.Log("Incorrect answer");
             _board.MakeMove("O");
         }
-        // TODO: Add timer for disable time before doing next question
-        await Task.Delay((int)(DISABLE_TIME * 1000)); // 42 = 1000/24 WAIT AN EXTRA FRAME BEFORE RESETTING
+        await Task.Delay((int)(DisableTime * 1000));
         _controller.GetNextQuestion();
     }
 }
